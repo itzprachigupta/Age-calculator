@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/calculator-light.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <title>Age Calculator 📅</title>
+</head>
+<body id="body">
+    
+    <nav id="nav-bar" class="font-color nav-bg">
+        <div id="intro-heading">
+            <img src="images/calculator-light.png">
+            <h2>Age Calculator</h2>
+        </div>
+        <div class="nav-bar-links">
+            <ul class="" id="nav-links">
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#feedback">Contact</a>
+                </li>
+                <!-- <li>
+                    <a href="https://www.linkedin.com/in/itzprachigupta/" target="_blank">About Me </a>        
+                </li> -->
+                <li>
+                    <a href="#" onclick="location.reload()">Calculate again</a>
+                </li>
+                <label class="switch">
+                    <input type="checkbox"  id="theme" onclick="swapImage()">
+                    <span class="slider round"></span>
+                </label>
+            </ul>
+            <a href="#" class="nav-toggle  hover-link" id="nav-toggle" >
+                <img src="images/menu.png" alt="menu" id="pic">
+            </a>
+        </div>
+    </nav>
+
+    <main id="main-section" class="text-center font-color">
+        <h1 class="heading-font-size"><span id="welcome-text"></span></h1>
+        <form id="dob-form">
+            <label for="dob-input"> <h2 class="sub-heading-font-size">Select Your Date of Birth </h2> </label>
+            <input required id="dob-input" type="date" name="dob" class="text-center para-font-size"><br>
+            <button type="button" id="submit-button" onclick="calculateAge()">Get &nbsp;Age</button>
+        </form>
+        <div id="response-section">
+            <h3 class="heading-font-size nav-bg padding-1rem text-left">Result</h3>
+
+            <h2 class="heading-font-size text-left">Your Age is<br>
+                <ul id="age-display" class="sub-heading-font-size border-top padding-1rem" >
+                    <li><span id="age" class="special-font"></span> </li>
+                </ul>
+            </h2>
+
+            <h2 class="heading-font-size text-left border-bottom">Your Date of Birth is </h2>
+            <span id="entered-dob" class="special-font text-left"></span>
+
+            <h2 class="heading-font-size text-left">You Already lived<br>
+            <ul id="other-info-display" class="sub-heading-font-size border-top padding-1rem">
+                <li><span id="age-years" class="special-font"></span> Years OR</li>
+                <li><span id="a-months" class="special-font"></span> Months OR</li>
+                <li><span id="a-weeks" class="special-font"></span> Weeks OR</li>
+                <li><span id="a-days" class="special-font"></span> Days OR</li>
+                <li><span id="a-hours" class="special-font"> </span> Hours OR</li>
+                <li><span id="a-minutes" class="special-font"></span> Minutes OR</li>
+                <li><span id="a-seconds" class="special-font"></span> Seconds</li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- about age calculator -->
+    <div id="about" class="font-color">
+            <h3 class="sub-heading-font-size nav-bg">About</h3>
+            <p class="para-font-size"> 
+                An age calculator is a tool or application designed to determine a person's age based on their date of 
+                birth and the current date. It is a convenient way to find out exactly how old someone is without 
+                manually calculating it.This age calculator calculates your age in years, months, weeks, days, hours, minutes and seconds.<br>
+                The age calculator typically requires you to input two pieces of information:<br>
+                1. Date of Birth (DOB): This is the date when the person was born, including the day, month, and year.<br>
+                2. Current Date: The present date when you are using the age calculator.<br>
+                Using these two inputs, the age calculator will perform a simple calculation to determine the person's 
+                age in years, months, and days. The process generally involves comparing the DOB with the current date and 
+                then subtracting the birth year from the current year to get the number of years. If the birth month and day 
+                are not reached yet in the current year, the age calculator may deduct one more year to adjust for the remaining time.
+            </p>
+            </div>
+
+    <!-- footer -->
+    <footer class="text-center font-color" id="feedback">
+        <h4 class="sub-heading-font-size">Have any Queries or Suggestions ?</h4>
+        <h5 class="para-font-size">Feel Free to contact </h5>
+        <ul>
+            <li class="para-font-size">
+                <a href="https://www.linkedin.com/in/itzprachigupta/" target="_blank">
+                    <img src="images/linkedin.png" >
+                </a>
+            </li>                
+            <li class="para-font-size">
+                <a href="mailto:prachigupta58000+agecalculator@gmail.com">
+                    <img src="images/gmail.png">
+                </a>
+            </li>
+            <li class="para-font-size">
+                <a target="_blank" href="https://github.com/itzprachigupta">
+                    <img src="images/github.png" alt="github icon">
+                </a>
+            </li>                
+            <li class="para-font-size">
+                <a target="_blank" href="https://www.instagram.com/itz_prachi.g/">
+                    <img src="images/instagram.png" alt="instagram icon">
+                </a>
+            </li>
+        </ul>
+        <!-- <div id="bubble-container">
+            <div id="bubble"></div>
+        </div> -->
+
+        
+    </footer>
+
+    <!-- <footer>
+        Credits Section
+        <a href="https://www.flaticon.com/free-icons/calculator" title="calculator icons">Calculator icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by riajulislam - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/gmail" title="gmail icons">Gmail icons created by Pixel perfect - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/hamburger" title="hamburger icons">Hamburger icons created by shin_icons - Flaticon</a>
+    </footer> -->
+
+    <script src="script.js"></script>
+</body>
+</html>
